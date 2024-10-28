@@ -1,0 +1,15 @@
+import plotly.express as px
+
+iris = px.data.iris()
+print("First 10 records:")
+print(iris.head(10))
+num_rows, num_columns = iris.shape
+t=(num_rows,num_columns)
+print("\nTotal number of Rows and Columns of the dataset-")
+print(t)
+print("\nColumn names:")
+print(iris.columns.tolist())
+print("\nMean of all numerical attributes:")
+means = iris.mean(numeric_only=True)
+for column, mean in means.items():
+    print(f"{column} - Mean = {mean:.15f}")
