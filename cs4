@@ -1,0 +1,20 @@
+import plotly.express as px
+import seaborn as sns
+import matplotlib.pyplot as plt
+iris = px.data.iris()
+attribute = 'petal_width'
+plt.figure(figsize=(10, 6))
+sns.boxplot(y=iris[attribute], width=0.2)
+plt.title(f'Box Plot of {attribute}')
+plt.ylabel(attribute)  # Set y-axis label to the attribute name
+plt.xlabel('')  # Remove x-axis label as it's not needed for a vertical boxplot
+plt.show()
+attr_desc = iris[attribute].describe()
+print(f"\nStatistical description of '{attribute}':")
+print(attr_desc)
+plt.figure(figsize=(10, 6))
+sns.kdeplot(iris[attribute], fill=True)
+plt.title(f'Dependency Curve (KDE) of {attribute}')
+plt.xlabel(attribute)
+plt.ylabel('Density')
+plt.show()
