@@ -1,0 +1,24 @@
+import numpy as np
+from scipy.optimize import minimize
+
+x = np.linspace(-10, 30, 100)
+e = np.random.normal(0, 1, 100)
+y = 10 + 4*x + e 
+
+def likelihood(params):
+    a, b, c = params
+    y_pred = a + b*x + c*x**2
+    return np.sum((y - y_pred)**2)
+
+init_params = [10, 4, 0]
+res = minimize(likelihood, init_params, method="L-BFGS-B")
+print("message:", res.message)
+print("success:", res.success)
+print("status:", res.status)
+print("fun:", res.fun)
+print("x:", res.x)
+print("nit:", res.nit)
+print("jac:", res.jac)
+print("nfev:", res.nfev)
+print("njev:", res.njev)
+print("hess_inv:", res.hess_inv)
