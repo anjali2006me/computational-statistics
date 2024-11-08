@@ -24,7 +24,8 @@ print("Maximum:")
 print(df_2d.max())
 
 data = {
-    'method': ['Astrometry', 'Eclipse Timing Variations', 'Imaging', 'Microlensing', 'Orbital Brightness Modulation', 'Pulsar Timing', 'Pulsation Timing Variations', 'Radial Velocity', 'Transit', 'Transit Timing Variations'],
+    'method': ['Astrometry', 'Eclipse Timing Variations', 'Imaging', 'Microlensing', 'Orbital Brightness Modulation', 
+    'Pulsar Timing', 'Pulsation Timing Variations', 'Radial Velocity', 'Transit', 'Transit Timing Variations'],
     'number': [0.0, 0.5, 0.933035, 0.387553, 0.577350, 1.095445, None, 1.157141, 1.399119, 0.5],
     'orbital_period': [544.217663, 2499.130945, 213978.177277, 1113.166333, 0.725493, 16313.265573, None, 1454.926210, 46.185893, 71.599884],
     'mass': [None, 1.308148, None, None, None, None, None, 3.825883, None, None],
