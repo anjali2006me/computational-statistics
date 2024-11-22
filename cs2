@@ -1,5 +1,4 @@
 import plotly.express as px
-
 iris = px.data.iris()
 print("First 10 records:")
 print(iris.head(10))
